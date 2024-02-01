@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+
+:root {
+    --orange: hsl(31, 77%, 52%);
+    --cyan: hsl(184, 100%, 22%);
+    --dark: hsl(179, 100%, 13%);
+    /* paragraphs */
+    --white: hsla(0, 0%, 100%, 0.75);
+    /* bg headings button */
+    --light: hsl(0, 0%, 95%);
+
+    --lexend: 'Lexend Deca', sans-serif;
+    --big: 'Big Shoulders Display', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+
+    font-family: var(--lexend);
+    font-size: 15px;
+    background: var(--light);
+    color: var(--white);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 320px);
+    height: 450px;
+
+    border-radius: 10px;
+    overflow: hidden;
+    
+}
+
+.grid-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    padding: 40px;
+}
+
+.g1 {
+    background: var(--orange);
+}
+
+.g2 {
+    background: var(--cyan);
+}
+
+.g3 {
+    background: var(--dark);
+}
+
+
+.grid-container .title {
+    font-family: var(--big);
+    font-size: 35px;
+    font-weight: 700;
+    color: var(--light);
+
+    text-transform: uppercase;
+    letter-spacing: .3px;
+}
+
+.grid-container .descript {
+    width: 220px;
+}
+
+.grid-container button {
+    background: var(--light);
+    border: none;
+    border-radius: 30px;
+
+    width: 60%;
+    height: 50px;
+    margin-top: 35px;
+
+    font-family: var(--lexend);
+    font-weight: 400;
+    letter-spacing: .4px;
+    cursor: pointer;
+}
+
+.g1 button {
+    color: var(--orange);
+}
+
+.g2 button {
+    color: var(--cyan);
+}
+
+.g3 button {
+    color: var(--dark);
+}
+
+.grid-container button:hover {
+    border: 2px solid var(--white);
+    background: transparent;
+    color: var(--light);
+}
+
+
+
+/*  Queries  */ 
+
+@media (max-width: 376px) {
+
+    .container {
+        display: flex;
+        flex-direction: column;
+
+        width: 87%;
+        height: 230vh;
+
+        padding-top: 65px;
+    }
+
+    .g1 {
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+    }
+
+    .g3 {
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+
+    .grid-container .descript {
+        width: 260px;
+    }
+
+    .grid-container button  {
+        margin-top: -5px;
+    }
+
+}
